@@ -1,0 +1,151 @@
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+html {
+    
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+  }
+  section {
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+  }
+mark {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+.welcome-text {
+  font-weight: bold;
+  text-align: right;
+}
+.ana-highlight-homepage {
+  color: red;
+}
+
+.welcome-container {
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.welcome-star-small1,
+.welcome-star-big,
+.welcome-star-small2,
+.welcome-star-small3 {
+  position: absolute;
+}
+.welcome-star-big {
+  margin: 0;
+  left: -150px;
+  top: -100px;
+}
+.welcome-star-small1 {
+  top: -80px;
+  right: 100px;
+}
+.welcome-star-small3 {
+  bottom: -90px;
+  left: -150px;
+}
+.welcome-star-small2 {
+  top: -100px;
+}
+
+.welcome-stars {
+  position: absolute;
+
+  /* left:40px; */
+}
+
+@media screen and (max-width: 360px) {
+  body > .welcome-container > .welcome-bitmoji {
+    position: absolute;
+    top: 70%;
+    left: 0;
+  }
+
+  body > .about-me-container {
+    margin-left: 10%;
+  }
+  body > .projects-container, .project-cards {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+  }
+}
+.lang-icons {
+  display: inline-block;
+}
+.lang-icons > img {
+  padding: 10px;
+}
+.text-about-me {
+  line-height: 200%;
+}
+.welcome-bitmoji {
+  position: absolute;
+  left: 30%;
+  top: 70%;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Cards projects
+desktop*/
+
+
+
+@media (min-width: 40rem) {
+    .project-cards {
+        color:black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media (min-width: 60rem) {
+
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+.img-project {
+    display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+.card {
+    background-color: rgba(255, 0, 0, 0.1);
+    padding:1rem;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+    text-decoration: none;
+}
+.card > a {
+    text-decoration: none;
+}
