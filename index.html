@@ -41,10 +41,14 @@
       content="#FFF"
       media="(prefers-color-scheme: light)"
     />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
   </head>
 
   <body>
+   
     <section class="welcome-container">
+      <!-- <h1 class="test">📢UNDER CONSTRUCTION📢</h1> -->
       <div class="welcome-stars">
         <img class="welcome-star-small1" src="/src/small-star.png" />
         <img class="welcome-star-small2" src="/src/small-star.png" />
@@ -52,6 +56,7 @@
         <img class="welcome-star-big" src="/src/big-star.png" />
       </div>
       <div class="welcome-text">
+        
         <h1>
           hello <br />i'm <span class="ana-highlight-homepage">Anastasia</span>
         </h1>
@@ -81,7 +86,7 @@
 
       <div class="wrap-projects-worked-on">
        
-        <h2> 📆<mark>Projects</mark> <br />i worked on</h2>
+        <h2> <mark>📆Projects</mark> <br />i worked on</h2>
       </div>
       <div class="project-cards">
         <article class="card">
@@ -145,18 +150,20 @@
             <h2><mark>📕Academics</mark></h2>
         </div>
 
-        <div>
-          <h3 class="academics-degree">Bachelor</h3>
-          <p>Business Administration</p>
+        <div class="academics-program-wrap">
+          <h4 class="academics-year">2019-2021 </h4>
+          <h3 class="academics-degree">Bachelor  </h3>
+          <p class="academics-program-title">Business Administration</p>
         </div>
-        <div>
-          <h3 class="academics-degree">Masters</h3>
-          <p>Information Management</p>
+        <div class="academics-program-wrap">
+          <h4 class="academics-year">2022-2023 </h4>
+          <h3 class="academics-degree">Masters 2022-2023</h3>
+          <p class="academics-program-title">Information Management</p>
         </div>
       </div>
     </section>
 
-    <section class="altTL">
+    <!-- <section class="altTL">
         
         <div class="altEV right">
           <strong>2021-2022</strong>
@@ -173,8 +180,41 @@
         </div>
       
       
+    </section> -->
+    <section>
+      <div class="wrap-projects-worked-on">
+       
+        <h2> <mark>Countries</mark> i lived/worked in</h2>
+      </div>
+      <div class="carousel js-flickity">
+        <div class="carousel-cell">
+          <ul>
+            <li> <strong>🇺🇸 USA</strong></li>
+            <li>Here is what i have done in the US..</li>
+          </ul>
+        </div>
+        <div class="carousel-cell">
+          <ul>
+            <li> <strong>🇬🇧 UK</strong></li>
+            <li>Here is what i have done in the US..</li>
+          </ul>
+        </div>
+        <div class="carousel-cell">
+          <ul>
+            <li> <strong>🇷🇺 Russia</strong></li>
+            <li>Here is what i have done in the US..</li>
+          </ul>
+        </div>
+        <div class="carousel-cell">
+          <ul>
+            <li> <strong>🇧🇪 Belgium</strong></li>
+            <li>Here is what i have done in the US..</li>
+          </ul>
+        </div>       
+      </div>
     </section>
-
+    
     <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>
