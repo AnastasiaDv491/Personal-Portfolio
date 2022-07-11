@@ -6,16 +6,32 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
   margin: 0;
 }
+
+/* UNDER CONSTRUCTION */
+.test {
+  margin-top: 0;
+  position: absolute;
+  top: 200px;
+  font-size: xxx-large;
+  color: steelblue;
+  -webkit-transform: rotate(-40deg);
+}
 html {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
 }
+@media screen and (max-width: 768px) {
+  section {
+    scroll-snap-align: start;
+  }
+}
+
 section {
   border-bottom: 1px solid white;
   padding: 1rem;
   height: 100vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   position: relative;
 }
 mark {
@@ -25,13 +41,12 @@ a {
   text-decoration: none !important;
   color: inherit;
 }
-h2 {
-  font-size: 1.5em;
-}
 
-.welcome-text {
+
+.welcome-text-bitmoji > h1 {
   font-weight: bold;
   text-align: right;
+  font-size: 48px;
 }
 .ana-highlight-homepage {
   color: red;
@@ -43,7 +58,6 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
 }
 .welcome-star-small1,
 .welcome-star-big,
@@ -52,22 +66,49 @@ h2 {
   position: absolute;
 }
 
-@media screen and (max-width: 360px) {
+.welcome-star-small1 {
+  left: 488.6px;
+  top: 395.49px;
+  width: 64px;
+  height: 56px;
+}
+
+.welcome-star-small2 {
+  left: 592.72px;
+  top: 418.23px;
+}
+
+.welcome-star-small3 {
+  left: 470.22px;
+  top: 535.16px;
+}
+
+.welcome-star-big {
+  left: 450px;
+  top: 300px;
+  width: 500px;
+  height: 466px;
+}
+
+@media screen and (max-width: 768px) {
   .welcome-star-big {
     margin: 0;
     left: -150px;
     top: -100px;
+    width: 196px;
+    height: 196px;
   }
   .welcome-star-small1 {
-    top: -80px;
-    right: 100px;
+    top: 87px;
+    left: 20px;
   }
   .welcome-star-small3 {
-    bottom: -90px;
+    top: 40px;
     left: -150px;
   }
   .welcome-star-small2 {
-    top: -100px;
+    top: -150px;
+    left: -100px;
   }
 
   .welcome-stars {
@@ -75,15 +116,41 @@ h2 {
 
     /* left:40px; */
   }
+  .welcome-text-bitmoji > h1 {
+    font-size: 35px;
+  }
 }
 
-@media screen and (max-width: 360px) {
-  body > .welcome-container > .welcome-bitmoji {
+body > .welcome-container > .welcome-text-bitmoji > .anastasia-bitmoji-desktop {
+  position: absolute;
+  left: 59%;
+  top: 30%;
+}
+
+.anastasia-bitmoji-mobile {
+  display: none;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 30px;
+  font-size: 45px;
+  font-style: ;
+}
+@media screen and (max-width: 768px) {
+  body
+    > .welcome-container
+    > .welcome-text-bitmoji
+    > .anastasia-bitmoji-mobile {
+    display: block;
     position: absolute;
+    left: 0%;
     top: 70%;
-    left: 0;
   }
 
+  .anastasia-bitmoji-desktop {
+    display: none;
+  }
   body > .projects-container {
     margin-left: 10%;
     margin-right: 10%;
@@ -91,58 +158,97 @@ h2 {
   }
 }
 
+/* About me container */
 .lang-icons {
   display: inline-block;
 }
 .lang-icons > img {
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.text-about-me {
-  line-height: 200%;
-}
-.welcome-bitmoji {
-  position: absolute;
-  left: 30%;
-  top: 70%;
-}
-
-.arrow-down {
-  position: absolute;
-  bottom: 30px;
-  width: 20px;
-  height: 20px;
+.text-about-me > h2{
+  
+  font-size: xx-large;
+  text-align: center;
 }
 
-/* Cards projects
-desktop*/
+/* Cards projects desktop*/
 .about-me-container {
   margin-left: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .wrap-projects-worked-on {
-  text-align: left;
-  /* margin-left:10px; */
-  font-size: larger;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.wrap-projects-worked-on-title {
+  flex: 100%;
+  justify-content: center;
+  display: flex;
+  font-size: xx-large;
+}
+.wrap-projects-worked-on-title >h2{
+  font-size: xx-large;  
+}
+.deloitte-card {
+  flex: 50%;
 }
 
-@media (min-width: 40rem) {
+.urban-brussels-card {
+  flex: 50%;
+}
+
+.project-cards {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .lang-icons{
+    display: block;
+  }
   .project-cards {
-    color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
+  }
+
+  .text-about-me >h2 {
+    line-height: 200%;
+    display: block;
+    font-size
   }
 
   .card {
     flex: 0 1 calc(50% - 1em);
   }
+  .about-me-container {
+    margin-left: 5px;
+    display: block;
+  }
+  .wrap-projects-worked-on {
+    display: block;
+  }
+  .urban-brussels-card {
+    display: none;
+  }
 }
 
-@media (min-width: 60rem) {
+@media screen and (max-width: 768px) {
   .card {
     flex: 0 1 calc(25% - 1em);
   }
 }
+
 .img-project {
   display: block;
   border: 0;
@@ -152,6 +258,12 @@ desktop*/
 
 .card {
   background-color: rgba(255, 0, 0, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   padding: 1rem;
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -185,7 +297,7 @@ desktop*/
 .academics-degree {
   color: #f01111;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
   .academics-container {
     padding-top: 2.5rem;
   }
@@ -230,12 +342,12 @@ desktop*/
   align-items: center;
 }
 
-@media screen and ( min-width: 768px) {
-   /* half-width cells for larger devices */
+@media screen and (min-width: 768px) {
+  /* half-width cells for larger devices */
   .carousel-cell {
     width: 50%;
   }
-} 
+}
 
 .flickity-prev-next-button .arrow {
   fill: red;
@@ -244,18 +356,8 @@ desktop*/
   color: red;
 }
 
-/* delete before work */
-.test {
-  margin-top: 0;
-  position: absolute;
-  top: 200px;
-  font-size: xxx-large;
-  color: steelblue;
-  -webkit-transform: rotate(-40deg);
-}
-
 /* PLUS SIZED PHONES */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px) {
   .welcome-star-big {
     margin: 0;
     left: -150px;
@@ -280,7 +382,7 @@ desktop*/
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px) {
   body > .welcome-container > .welcome-bitmoji {
     position: absolute;
     top: 70%;
@@ -292,11 +394,20 @@ desktop*/
     margin-right: 10%;
     margin-top: 10%;
   }
-}
 
-.carousel-year{
-  font-size: small;
-  margin: 0.5rem 0 0.5rem 0;
-  text-decoration: underline;
-}
+  .languages-section {
+    margin: 70px 0 0;
+  }
 
+  .languages-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .carousel-year {
+    font-size: small;
+    margin: 0.5rem 0 0.5rem 0;
+    text-decoration: underline;
+  }
+}
